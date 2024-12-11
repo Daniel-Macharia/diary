@@ -1,0 +1,15 @@
+{% extends 'memory/base.html' %}
+
+{% block content %}
+
+<main>
+    <form method="post">
+        {% csrf_token %}
+        {{ day.as_p }}
+        {{ event.as_p }}
+        {{ photo.as_p }}
+        <input type="submit" value="Add">
+    </form>
+</main>
+
+{% endblock content %}

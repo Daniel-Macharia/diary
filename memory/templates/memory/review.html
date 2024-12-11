@@ -1,0 +1,16 @@
+{% extends 'memory/base.html' %}
+
+{% block content %}
+
+<main>
+    <ul>
+        <h>Here are your memories</h>
+        {%for memory in memories %}
+        <li><p>{{memory.eventTitle}}</p></li>
+        <li><img src="url '{{memory.photo}}'"></li>
+        <li><p>{{memory.eventDescription}}</p></li>
+        {% endfor %}
+    </ul>
+</main>
+
+{% endblock content %}

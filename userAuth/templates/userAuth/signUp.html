@@ -1,0 +1,15 @@
+{% extends 'userAuth/base.html' %}
+
+{% block content %}
+
+<main>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="password" value="confirm" name="confirmPassword">
+        <input type="submit" value="sign Up">
+        <a href="{% url 'logIn' %}">Log In</a>
+    </form>
+</main>
+
+{% endblock content %}

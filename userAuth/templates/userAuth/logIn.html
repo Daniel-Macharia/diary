@@ -1,0 +1,16 @@
+{% extends 'userAuth/base.html' %}
+
+{% block content %}
+
+<main>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <input type="submit" value="Log In">
+        <a href="{% url 'signUp' %}">Sign UP</a>
+        <a href="{% url 'forgotPassword' %}">Forgot password ?</a>
+    </form>
+</main>
+
+{% endblock content %}
