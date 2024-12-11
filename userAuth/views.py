@@ -35,7 +35,7 @@ def signUpView(request):
     if request.method == 'POST':
         userData = forms.UserSignUpForm(request.POST)
         if not userData.is_valid():
-            profilePicture = request.POST.get('userProfilePicture')
+            profilePicture = request.FILES.get('userProfilePicture')
             name = request.POST.get('userName')
             email = request.POST.get('userEmail')
             password = request.POST.get('userPassword')

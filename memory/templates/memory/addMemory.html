@@ -3,7 +3,7 @@
 {% block content %}
 
 <main>
-    <form method="post">
+    <form enctype="multipart/form-data" method="post">
         {% csrf_token %}
         {{ day.as_p }}
         {{ event.as_p }}
