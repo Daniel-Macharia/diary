@@ -56,5 +56,8 @@ def reviewMemoryView(request):
         photos = models.Photo.objects.filter(eventID=event['eventID']).values().order_by('eventID')[0]
         data.append({'event' : event, 'photos' : photos})
     
+    for datum in data:
+        print(f"Image url: {datum}")
+
     print(f"\n\n{data}\n\n")
     return render(request, "memory/review.html", {"memories" : data})
