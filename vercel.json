@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "tumeiget/wsgi.py",
+        "src": "diary/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
       },
@@ -14,7 +14,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "tumeiget/wsgi.py"
+        "dest": "diary/wsgi.py"
       }
     ],
     "outputDirectory": "static"
