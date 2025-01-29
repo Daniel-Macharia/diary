@@ -4,10 +4,16 @@
         "use": "@ardnt/vercel-python-wsgi",
         "config": { "maxLambdaSize": "15mb" }
     }],
-    "routes": [
-        {
-            "src": "/",
-            "dest": "diary/wsgi.py"
-        }
-    ]
+   "routes": [
+      {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "diary/wsgi.py"
+      }
+    ],
+    "outputDirectory": "static"
+  }
 }
