@@ -11,8 +11,8 @@
       },
       {
         "src": "/(.*)",
-        "dest": "diary/wsgi.py"
+        "dest": "/diary/wsgi.py"
       }
     ],
-    "outputDirectory": "static"
+    "outputDirectory": "staticfiles"
   }
