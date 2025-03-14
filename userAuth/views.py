@@ -42,7 +42,7 @@ def signUpView(request):
             confirmPassword = request.POST.get('confirmPassword')
 
             if password == confirmPassword:
-                user = models.User(userProfilePicture=profilePicture, userName=name, userEmail=email, userPassword=password)
+                user = models.User(userProfilePicture=Null, userName=name, userEmail=email, userPassword=password)
                 user.save()
                 return render( request, "memory/home.html")
             else:
