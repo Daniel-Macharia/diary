@@ -7,7 +7,6 @@ from . import models
 # Create your views here.
 def logInView(request):
     if request.method == 'POST':
-        return render(request, 'memory/home.html')
         name = request.POST.get('userName')
         password = request.POST.get('userPassword')
 
