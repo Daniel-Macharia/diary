@@ -25,7 +25,7 @@ def addMemoryView(request):
         print(userData)
         dayData = models.Day(userID=user, date=enteredDate, title=enteredTitle)
         eventData = models.Event(date=dayData, eventTitle=enteredEventTitle, eventDescription=enteredEventDescription)
-        photoData = models.Photo(eventID=eventData,photo=enteredPhoto)
+        photoData = models.Photo(eventID=eventData,photo=Null)
 
         #day = models.Day(userID=userData.userID, date=enteredDate, title=enteredTitle)
         #event = models.Event(date=day.date, eventTitle=enteredEventTitle,  eventDescription=enteredEventDescription)
