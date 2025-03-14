@@ -14,7 +14,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "diary/wsgi.py"
+        "dest": "archive/wsgi.py"
       }
     ],
     "outputDirectory": "static"
