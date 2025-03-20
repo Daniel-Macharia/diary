@@ -18,14 +18,14 @@ def addMemoryView(request):
         enteredTitle = request.POST.get('title')
         enteredEventTitle = request.POST.get('eventTitle')
         enteredEventDescription = request.POST.get('eventDescription')
-        enteredPhoto = request.FILES.get('photo')
+        #enteredPhoto = request.FILES.get('photo')
 
         userData = models.User.objects.filter(userID=10).values()#(userProfilePicture=enteredPhoto, userName="macharia", userEmail="macharia@gmail.com", userPassword="@Macharia1")
         user = models.User(userID=userData[0]['userID'], userProfilePicture=userData[0]['userProfilePicture'], userName=userData[0]['userName'], userEmail=userData[0]['userEmail'], userPassword=userData[0]['userPassword'])
         print(userData)
         dayData = models.Day(userID=user, date=enteredDate, title=enteredTitle)
         eventData = models.Event(date=dayData, eventTitle=enteredEventTitle, eventDescription=enteredEventDescription)
-        photoData = models.Photo(eventID=eventData,photo=Null)
+        #photoData = models.Photo(eventID=eventData,photo=Null)
 
         #day = models.Day(userID=userData.userID, date=enteredDate, title=enteredTitle)
         #event = models.Event(date=day.date, eventTitle=enteredEventTitle,  eventDescription=enteredEventDescription)
@@ -34,18 +34,18 @@ def addMemoryView(request):
         #user.save()
         dayData.save()
         eventData.save()
-        photoData.save()
+        #photoData.save()
         return HttpResponse(f"""adding memory ...\n{enteredDate}
         \n{enteredTitle}\n{enteredEventTitle}\n{enteredEventDescription}\n{enteredPhoto}""")
     
     else:
         dayForm = forms.DayForm()
         eventForm = forms.EventForm()
-        photoForm = forms.PhotoForm()
+        #photoForm = forms.PhotoForm()
 
         return render(request, 'memory/addMemory.html', {'day' : dayForm,
-        'event' : eventForm,
-        'photo' : photoForm})
+        'event' : eventForm})
+        #'photo' : photoForm})
     
 
 def reviewMemoryView(request):

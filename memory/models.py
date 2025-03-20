@@ -19,5 +19,5 @@ class Event(models.Model):
 class Photo(models.Model):
     eventID = models.ForeignKey(Event, on_delete=models.CASCADE)
     photoID = models.AutoField(primary_key=True)
-    photo = models.ImageField(upload_to='memory/static/memory/photos/')
+    #photo = models.ImageField(upload_to='memory/static/memory/photos/')
 

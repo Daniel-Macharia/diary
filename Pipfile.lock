@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "fe56c1ddcbde45688836ab18139ac463f4e75e2a4a747d6d9fbdc06e77da4bf9"
+            "sha256": "d896535c6fab6aee006757e86f70cfb79003b1d7915f345cb1f0bbbc57d6880c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -29,7 +29,6 @@
                 "sha256:1323617cb624add820cb9611cdcc788312d250824f92ca6048fda8625514af2b",
                 "sha256:30de4ee43a98e5d3da36a9002f287ff400b43ca51791920bfb35f6917bfe041c"
             ],
-            "index": "pypi",
             "markers": "python_version >= '3.10'",
             "version": "==5.1.7"
         },
@@ -43,12 +42,12 @@
         },
         "django-cors-headers": {
             "hashes": [
-                "sha256:5762ec9c2d59f38c76828dc1d4308baca4bc0d3e1d6f217683e7a24a1c4611a3",
-                "sha256:ee02f4b699e9b6645602a46d0adb430ee940a1bf8df64f77e516f8d7711fee60"
+                "sha256:6fdf31bf9c6d6448ba09ef57157db2268d515d94fc5c89a0a1028e1fc03ee52b",
+                "sha256:f1c125dcd58479fe7a67fe2499c16ee38b81b397463cf025f0e2c42937421070"
             ],
             "index": "pypi",
-            "markers": "python_version >= '3.5'",
-            "version": "==3.1.1"
+            "markers": "python_version >= '3.9'",
+            "version": "==4.7.0"
         },
         "django-rest-auth": {
             "hashes": [
@@ -59,12 +58,12 @@
         },
         "djangorestframework": {
             "hashes": [
-                "sha256:5488aed8f8df5ec1d70f04b2114abc52ae6729748a176c453313834a9ee179c8",
-                "sha256:dc81cbf9775c6898a580f6f1f387c4777d12bd87abf0f5406018d32ccae71090"
+                "sha256:2b8871b062ba1aefc2de01f773875441a961fefbf79f5eed1e32b2f096944b20",
+                "sha256:36fe88cd2d6c6bec23dca9804bab2ba5517a8bb9d8f47ebc68981b56840107ad"
             ],
             "index": "pypi",
-            "markers": "python_version >= '3.5'",
-            "version": "==3.10.3"
+            "markers": "python_version >= '3.8'",
+            "version": "==3.15.2"
         },
         "six": {
             "hashes": [

@@ -18,10 +18,10 @@ class EventForm(ModelForm):
     
 
 
-class PhotoForm(ModelForm):
-    class Meta:
-        model = models.Photo
-        fields = ['photo']
+# class PhotoForm(ModelForm):
+#     class Meta:
+#         model = models.Photo
+#         fields = ['photo']
 
     
 
