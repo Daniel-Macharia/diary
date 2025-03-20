@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from django.db import connection
+
 from . import forms
 from . import models
 
@@ -10,9 +12,18 @@ def logInView(request):
         name = request.POST.get('userName')
         password = request.POST.get('userPassword')
 
-        users = models.User.objects.filter(userName=name)
+        cursor = connection.cursor()
 
-        userListIsEmpty = True
+        q_set = cursor.execute("SELECT userID, userName FROM userAuth_User WHERE userName LIKE %s AND userPassword LIKE %s", [f"{name}", f"{password}"])#.filter(userName=name)
+
+        user = q_set.fetchone()
+        print(user)
+        if user:
+            return render(request, 'memory/home.html')
+        else:
+            return HttpResponse("No user with the entered name exists!\nPlease sign up.")
+        
+        """userListIsEmpty = True
         for user in users:
             userListIsEmpty = False
             if user.userName == name:
@@ -24,7 +35,7 @@ def logInView(request):
             return HttpResponse("No user with the entered name exists!\nPlease sign up.")
         else:
             return HttpResponse("Wrong password!\nPlease confirm and re-try")
-    
+    """
     else:
         logInForm = forms.UserLogInForm()
         return render(request, 'userAuth/logIn.html', {'form' : logInForm})
